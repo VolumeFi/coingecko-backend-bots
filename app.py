@@ -37,7 +37,7 @@ def main():
     cache_db.init()
     gecko.init()
     threading.Thread(target=cache_db.warm_cache_loop).start()
-    bottle.run(host="localhost", port=8080)
+    bottle.run(host="localhost", port=8880)
 
 
 if __name__ == "__main__":
