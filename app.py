@@ -24,7 +24,7 @@ def get_high_returns():
     market_cap = int(request.json.get("market_cap", 100))
     vol_30 = int(request.json.get("vol_30", 100))
     with cache_db.connect():
-        df = momentum_scanner_intraday.get_high_returns(
+        df = momentum_scanner_intraday.get_top_gainers(
             dex, lag_return, daily_volume, vol_30, market_cap
         )
     df.dropna(how="all", axis=1, inplace=True)
