@@ -170,7 +170,7 @@ def get_top_gainers(
     for lag in {6, 12, lag_return}:
         add_intraday_rets(df, lag)
     add_fdv(df)
-    # add_best_liquidity(df, dex)
+    add_best_liquidity(df, dex)
     add_technical_indicators(df)
     return df
 
